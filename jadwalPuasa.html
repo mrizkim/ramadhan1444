@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-nav">
+          <div class="logo">
+            <img src="" alt="" />
+            <a href="index.html">Ramadhan</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <a class="active" href="#">Jadwal Puasa</a>
+          <a href="https://iquranku.netlify.app" target="_blank">Quran</a>
+        </div>
+        <a href="" class="contact">Contact</a>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="header-jadwal">
+          <h1>Bogor</h1>
+          <p>1 Ramadhan 1444 H</p>
+          <h1 id="span"></h1>
+        </div>
+        <div id="list-jadwal"></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    jadwalPuasa();
+  </script>
+  <script>
+    var span = document.getElementById("span");
+
+    function time() {
+      var d = new Date();
+      var s = d.getSeconds();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      span.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+    }
+
+    setInterval(time, 1000);
+  </script>
+</html>

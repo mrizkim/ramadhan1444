@@ -13,19 +13,19 @@
         <div class="navbar-nav">
           <div class="logo">
             <img src="" alt="" />
-            <a href="">Ramadhan</a>
+            <a href="#">Ramadhan</a>
           </div>
         </div>
         <div class="navbar-item">
-          <a href="">Jadwal Puasa</a>
-          <a href="">Quran</a>
+          <a href="jadwalPuasa.html">Jadwal Puasa</a>
+          <a href="https://iquranku.netlify.app" target="_blank">Quran</a>
         </div>
-        <a href="" class="contact">Kontak</a>
+        <a href="" class="contact">Contact</a>
       </nav>
     </div>
     <div class="container">
       <div class="content">
-        <h3>Road To Lebaran 1444H</h3>
+        <h2>Road To Lebaran 1444 H</h2>
         <div class="count-down">
           <p id="count-days"></p>
           <p id="count-hours"></p>
@@ -56,9 +56,7 @@
 
         // Time calculations for days, hours, minutes and seconds
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 

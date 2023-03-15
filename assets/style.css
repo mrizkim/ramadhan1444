@@ -21,22 +21,44 @@ body {
 }
 
 .container {
-  margin: 1rem 7%;
+  margin: 2.5rem 7%;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "ramadhan";
 }
 .navbar a {
   color: #fff;
 }
+.navbar-item {
+  display: flex;
+}
 
-.navbar .navbar-item a {
+.navbar-item a {
   padding-left: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+}
+.navbar-item a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #d5a431;
+  padding-bottom: 0.5rem;
+  transform: scaleX(0);
+}
+.navbar-item a:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.5s;
+}
+
+.navbar-item a.active::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #d5a431;
+  padding-bottom: 0.5rem;
+  transform: scaleX(0.5);
 }
 
 .navbar .contact {
@@ -48,7 +70,7 @@ body {
 
 .content {
   height: 100vh;
-  margin-top: 3rem;
+  margin-top: 5rem;
   font-size: 1em;
   text-align: center;
   background-image: url(/assets/img/masjid.png);
@@ -58,11 +80,11 @@ body {
 }
 
 .content .count-down {
-  font-size: 3rem;
+  font-size: 5rem;
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 #count-days,
 #count-hours,
@@ -84,7 +106,7 @@ body {
   left: 0;
   right: 0;
   bottom: -30px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 #count-hours:after {
@@ -98,11 +120,10 @@ body {
 }
 
 .foto {
-  margin: 0 auto;
+  margin: auto;
+  margin-bottom: 2rem;
   width: 10rem;
   height: 10rem;
-  /* background-size: cover; */
-  /* background-image: url(/assets/img/Star.png); */
   overflow: hidden;
   border-radius: 50%;
   border: 5px solid #d5a431;
@@ -122,4 +143,118 @@ body {
 
 .text-content h1 {
   color: #d5a431;
+}
+
+/* JADWAL PUASA */
+.jadwal-puasa {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  font-size: 2rem;
+}
+
+.header-jadwal {
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+}
+
+.imsyak,
+.magrib {
+  color: #d5a431;
+}
+
+.imsyak,
+.shubuh,
+.dhuha,
+.dzuhur,
+.ashr,
+.magrib,
+.isya {
+  position: relative;
+}
+
+.imsyak::after,
+.shubuh::after,
+.dhuha::after,
+.dzuhur::after,
+.ashr::after,
+.magrib::after,
+.isya::after {
+  content: "Imsyak";
+  position: absolute;
+  text-align: center;
+  left: -10px;
+  right: 0;
+  top: -40px;
+  color: #fff;
+  font-family: "ramadhan";
+}
+.shubuh::after {
+  content: "Shubuh";
+}
+.dhuha::after {
+  content: "Dhuha";
+}
+.dzuhur::after {
+  content: "Dzuhur";
+}
+.ashr::after {
+  content: "Ashr";
+}
+.magrib::after {
+  content: "Magrib";
+}
+.isya::after {
+  content: "Isya";
+}
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    margin: 3rem 0;
+  }
+  .header-jadwal {
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+  }
+
+  .jadwal-puasa {
+    display: block;
+    font-size: 3rem;
+  }
+
+  .jadwal-puasa p {
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+  }
+  .imsyak::after,
+  .shubuh::after,
+  .dhuha::after,
+  .dzuhur::after,
+  .ashr::after,
+  .magrib::after,
+  .isya::after {
+    position: absolute;
+    text-align: center;
+    left: -70%;
+    top: 5px;
+    color: #fff;
+    font-family: "ramadhan";
+  }
 }
