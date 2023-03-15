@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+
+@font-face {
+  font-family: "ramadhan";
+  src: url("/Sketsaramadhan-nRLAO.otf");
+  font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Berkshire Swash", cursive;
+  color: #fff;
+  background-color: #060915;
+}
+
+.container {
+  margin: 1rem 7%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-family: "ramadhan";
+}
+.navbar a {
+  color: #fff;
+}
+
+.navbar .navbar-item a {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.navbar .contact {
+  color: #000;
+  background-color: #d5a431;
+  padding: 0.1rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.content {
+  height: 100vh;
+  margin-top: 3rem;
+  font-size: 1em;
+  text-align: center;
+  background-image: url(/assets/img/masjid.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content .count-down {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+#count-days,
+#count-hours,
+#count-minutes,
+#count-seconds {
+  position: relative;
+}
+#count-seconds {
+  color: #d5a431;
+}
+
+#count-days:after,
+#count-hours:after,
+#count-minutes:after,
+#count-seconds:after {
+  content: "Hari";
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: -30px;
+  font-size: 1rem;
+  color: #fff;
+}
+#count-hours:after {
+  content: "Jam";
+}
+#count-minutes:after {
+  content: "Menit";
+}
+#count-seconds:after {
+  content: "Detik";
+}
+
+.foto {
+  margin: 0 auto;
+  width: 10rem;
+  height: 10rem;
+  /* background-size: cover; */
+  /* background-image: url(/assets/img/Star.png); */
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #d5a431;
+  background-color: #fff;
+}
+
+.foto .img-foto {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.text-content {
+  font-family: "ramadhan";
+  font-size: 4rem;
+}
+
+.text-content h1 {
+  color: #d5a431;
+}
