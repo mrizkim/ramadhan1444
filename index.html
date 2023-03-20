@@ -5,73 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="assets/img/Star.png" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Ramadhan 1444 H</title>
   </head>
-  <body>
+  <body class="notLoaded">
+    <div id="preloader" class="page-load">
+      <div class="text">
+        <h2>loading....</h2>
+      </div>
+    </div>
     <div class="container">
       <nav class="navbar">
         <div class="navbar-nav">
           <div class="logo">
             <img src="" alt="" />
-            <a href="#">Ramadhan</a>
+            <a href="#" style="color: #d5a431">Ramadhan</a>
           </div>
         </div>
         <div class="navbar-item">
-          <a href="jadwalPuasa.html">Jadwal Puasa</a>
+          <a href="jadwalPuasa.html">Imysak dan Buka</a>
           <a href="https://iquranku.netlify.app" target="_blank">Quran</a>
         </div>
-        <a href="" class="contact">Contact</a>
+        <a href="https://rizkimunawar.netlify.app/" target="_blank" class="contact">Contact</a>
       </nav>
     </div>
-    <div class="container">
-      <div class="content">
-        <h2>Road To Lebaran 1444 H</h2>
-        <div class="count-down">
-          <p id="count-days"></p>
-          <p id="count-hours"></p>
-          <p id="count-minutes"></p>
-          <p id="count-seconds"></p>
-        </div>
-        <div class="foto">
-          <img class="img-foto" src="assets/img/foto.png" alt="" />
-        </div>
-        <div class="text-content">
-          <h1>Marhaban Ya Ramadhan</h1>
-          <h3>To You And Your Family</h3>
-        </div>
+    <div class="content">
+      <h3>Road To Lebaran 1444 H</h3>
+      <div class="count-down">
+        <p id="count-days"></p>
+        <p id="count-hours"></p>
+        <p id="count-minutes"></p>
+        <p id="count-seconds"></p>
+      </div>
+      <div class="foto">
+        <img class="img-foto" src="assets/img/foto.png" alt="" />
+      </div>
+      <div class="text-content">
+        <h1>Marhaban Ya Ramadhan</h1>
+        <h3>To You And Your Family</h3>
       </div>
     </div>
+    <footer>
+      <div class="icon-soc">
+        <a href="https://www.instagram.com/rizkimunawars/" target="_blank" class="bx bxl-instagram-alt"></a>
+        <a href="https://github.com/mrizkim" target="_blank" class="bx bxl-github"></a>
+        <a href="https://api.whatsapp.com/send?phone=087873813544" target="_blank" class="bx bxl-whatsapp"></a>
+      </div>
+      <p>Muhamad Rizki Munawar</p>
+    </footer>
 
-    <script>
-      // Set the date we're counting down to
-      var countDownDate = new Date("apr 23, 2023").getTime();
-
-      // Update the count down every 1 second
-      var x = setInterval(function () {
-        // Get today's date and time
-        var now = new Date().getTime();
-
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the result in an element with id="demo"
-        document.getElementById("count-days").innerHTML = days;
-        document.getElementById("count-hours").innerHTML = hours;
-        document.getElementById("count-minutes").innerHTML = minutes;
-        document.getElementById("count-seconds").innerHTML = seconds;
-
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(x);
-          document.getElementById("count-down").innerHTML = "Selamat Lebaran";
-        }
-      }, 1000);
-    </script>
+    <audio src="assets/audio/marhaban.mp3" id="my_audio" loop="loop"></audio>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/TextPlugin.min.js"></script>
+  <script>
+    gsap.registerPlugin(TextPlugin);
+    gsap.from("h2", { duration: 3, text: "", repeat: 3 });
+  </script>
+  <script>
+    $(document).ready(function () {
+      window.setTimeout("fadeout();", 4400);
+    });
+
+    function fadeout() {
+      $("#preloader")
+        .delay(1000)
+        .fadeOut("fast", function () {
+          $(".notLoaded").removeClass("notLoaded");
+        });
+    }
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      var resp = document.getElementById("my_audio");
+      var respNew = resp.play();
+      resp.volume = 0.5;
+      if (respNew !== undefined) {
+        respNew
+          .then((_) => {
+            // autoplay starts!
+          })
+          .catch((error) => {
+            //show error
+          });
+      }
+    };
+  </script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    countDown();
+  </script>
 </html>
