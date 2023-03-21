@@ -280,7 +280,7 @@ footer {
   color: #fff;
 }
 footer p {
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-size: 1.5rem;
   color: #000;
 }
@@ -361,6 +361,9 @@ footer p {
   }
 
   footer {
-    padding: 2.5rem 0;
+    padding: 1rem 0 4rem 0;
+  }
+  footer p {
+    padding: 0;
   }
 }
