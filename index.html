@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
     <link rel="shortcut icon" href="assets/img/Star.png" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Ramadhan 1444 H</title>
   </head>
   <body class="notLoaded">
     <div id="preloader" class="page-load">
+      <audio src="assets/audio/marhaban.mp3" id="my_audio" loop="loop"></audio>
       <div class="text">
         <h2>loading....</h2>
       </div>
@@ -27,7 +31,12 @@
           <a href="jadwalPuasa.html">Imysak dan Buka</a>
           <a href="https://iquranku.netlify.app" target="_blank">Quran</a>
         </div>
-        <a href="https://rizkimunawar.netlify.app/" target="_blank" class="contact">Contact</a>
+        <a
+          href="https://rizkimunawar.netlify.app/"
+          target="_blank"
+          class="contact"
+          >Contact</a
+        >
       </nav>
     </div>
     <div class="content">
@@ -48,14 +57,24 @@
     </div>
     <footer>
       <div class="icon-soc">
-        <a href="https://www.instagram.com/rizkimunawars/" target="_blank" class="bx bxl-instagram-alt"></a>
-        <a href="https://github.com/mrizkim" target="_blank" class="bx bxl-github"></a>
-        <a href="https://api.whatsapp.com/send?phone=087873813544" target="_blank" class="bx bxl-whatsapp"></a>
+        <a
+          href="https://www.instagram.com/rizkimunawars/"
+          target="_blank"
+          class="bx bxl-instagram-alt"
+        ></a>
+        <a
+          href="https://github.com/mrizkim"
+          target="_blank"
+          class="bx bxl-github"
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=087873813544"
+          target="_blank"
+          class="bx bxl-whatsapp"
+        ></a>
       </div>
       <p>Muhamad Rizki Munawar</p>
     </footer>
-
-    <audio src="assets/audio/marhaban.mp3" id="my_audio" loop="loop"></audio>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
@@ -81,7 +100,7 @@
     window.onload = function () {
       var resp = document.getElementById("my_audio");
       var respNew = resp.play();
-      resp.volume = 0.5;
+      resp.volume = 0.3;
       if (respNew !== undefined) {
         respNew
           .then((_) => {

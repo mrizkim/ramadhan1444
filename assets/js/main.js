@@ -2,7 +2,10 @@ const jadwalPuasa = () => {
   const date = new Date();
   const month = ("0" + (date.getMonth() + 1)).slice(-2);
   const year = date.getFullYear();
-  const day = date.getDate().toString().length === 1 ? `0${date.getDate()}` : date.getDate();
+  const day =
+    date.getDate().toString().length === 1
+      ? `0${date.getDate()}`
+      : date.getDate();
   const newValue = `${year}/${month}`;
   const hour = date.getHours(); // => 9
   const minute = date.getMinutes(); // =>  30
@@ -61,7 +64,12 @@ const dateTime = () => {
     var s = d.getSeconds();
     var m = d.getMinutes();
     var h = d.getHours();
-    span.textContent = ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+    span.textContent =
+      ("0" + h).substr(-2) +
+      ":" +
+      ("0" + m).substr(-2) +
+      ":" +
+      ("0" + s).substr(-2);
   }
 
   setInterval(time, 1000);
@@ -70,15 +78,18 @@ const dateTime = () => {
 const islamDate = () => {
   var tanggal = document.getElementById("tanggal-islam");
 
-  var d = new Date();
-  const day = d.getDate().toString().length === 1 ? `0${d.getDate()}` : d.getDate();
-  console.log(day);
-  tanggal.textContent = ("0" + (day - 23)).substr(-2) + " Ramadhan 1444 H";
+  var dayArabic = new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
+    day: "numeric",
+  }).format(Date.now());
+  var monthArabic = new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
+    month: "long",
+  }).format(Date.now());
+  tanggal.textContent = dayArabic + " " + monthArabic + " 1444 H";
 };
 
 const countDown = () => {
   // Set the date we're counting down to
-  var countDownDate = new Date("apr 23, 2023").getTime();
+  var countDownDate = new Date("apr 21, 2023").getTime();
 
   // Update the count down every 1 second
   var x = setInterval(function () {
@@ -90,7 +101,9 @@ const countDown = () => {
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 

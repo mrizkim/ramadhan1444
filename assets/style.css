@@ -101,7 +101,7 @@ body {
 
 .content {
   height: 82vh;
-  padding-top: 5rem;
+  padding-top: 2rem;
   font-size: 1em;
   text-align: center;
   background-image: url(/assets/img/masjid.png);
@@ -115,7 +115,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 #count-days,
 #count-hours,
@@ -151,8 +151,7 @@ body {
 }
 
 .foto {
-  margin: auto;
-  margin-bottom: 2rem;
+  margin: 0 auto;
   width: 10rem;
   height: 10rem;
   overflow: hidden;
@@ -310,6 +309,13 @@ footer p {
   .content {
     height: 80vh;
     padding: 5rem 0 0 0;
+  }
+  .content .count-down {
+    margin-bottom: 6rem;
+  }
+
+  .foto {
+    margin-bottom: 2rem;
   }
 
   .header-jadwal {
