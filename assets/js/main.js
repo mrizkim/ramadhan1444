@@ -70,13 +70,18 @@ const dateTime = () => {
 const islamDate = () => {
   var tanggal = document.getElementById("tanggal-islam");
 
-  var dayArabic = new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
-    day: "numeric",
-  }).format(Date.now());
-  var monthArabic = new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
-    month: "long",
-  }).format(Date.now());
-  tanggal.textContent = dayArabic + " " + monthArabic + " 1444 H";
+  let dayArabic = parseInt(
+    new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
+      day: "numeric",
+    }).format(Date.now())
+  );
+  // var monthArabic = new Intl.DateTimeFormat("en-u-ca-islamic-nu-latn", {
+  //   month: "long",
+  // }).format(Date.now());
+  // month = monthArabic.toString();
+  day = dayArabic;
+
+  tanggal.textContent = day + " Ramadhan 1444 H";
 };
 
 const countDown = () => {

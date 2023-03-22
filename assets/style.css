@@ -52,7 +52,7 @@ body {
 }
 
 .container {
-  margin: 2.5rem 7% 0 7%;
+  padding: 2.5rem 7% 0 7%;
 }
 
 .navbar {
@@ -100,7 +100,8 @@ body {
 }
 
 .content {
-  height: 82vh;
+  height: 80vh;
+  /* background-color: #d5a431; */
   padding-top: 2rem;
   font-size: 1em;
   text-align: center;
@@ -115,7 +116,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 4rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 #count-days,
 #count-hours,
@@ -186,7 +187,7 @@ body {
   justify-content: center;
   gap: 5rem;
   font-size: 2rem;
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 }
 .jadwal-jakarta {
   position: relative;
@@ -212,7 +213,7 @@ body {
 }
 
 .header-jadwal {
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
 }
 
 .imsyak,
@@ -266,13 +267,17 @@ body {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: block;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   background-color: #d5a431;
 }
 .icon-soc a {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #000;
   padding-right: 1rem;
 }
@@ -280,7 +285,7 @@ footer {
   color: #fff;
 }
 footer p {
-  padding-top: 0.5rem;
+  /* padding-top: 0.5rem; */
   font-size: 1.5rem;
   color: #000;
 }
@@ -304,14 +309,14 @@ footer p {
     font-size: 55%;
   }
   .container {
-    margin: 3rem 10px 0 10px;
+    padding: 3rem 10px 0 10px;
   }
   .content {
-    height: 80vh;
+    /* height: 80vh; */
     padding: 5rem 0 0 0;
   }
   .content .count-down {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   .foto {
@@ -319,7 +324,7 @@ footer p {
   }
 
   .header-jadwal {
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
     font-size: 1.2rem;
   }
 
@@ -361,9 +366,12 @@ footer p {
   }
 
   footer {
-    padding: 1rem 0 4rem 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
-  footer p {
-    padding: 0;
+  .icon-soc {
+    padding-bottom: 0.5rem;
   }
 }
